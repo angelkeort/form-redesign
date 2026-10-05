@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Registration Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="auth-wrapper">
+        <div class="form-container">
+            <div class="form-header">
+                <div class="logo-pill">Secure Portal</div>
+                <h1>Member Registration</h1>
+                <p>Complete the details below to create your online user ID.</p>
+            </div>
+
+            <form id="registrationForm" novalidate>
+                <div class="input-group">
+                    <label for="crnNumber">CRN / SS Number <span class="required">*</span></label>
+                    <input type="text" id="crnNumber" name="crnNumber" placeholder="03-1234567-8" autocomplete="off">
+                    <span class="error-msg" id="crnError"></span>
+                </div>
+
+                <div class="grid-2">
+                    <div class="input-group">
+                        <label for="email">Email Address <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" placeholder="name@example.com">
+                        <span class="error-msg" id="emailError"></span>
+                    </div>
+                    <div class="input-group">
+                        <label for="confirmEmail">Confirm Email <span class="required">*</span></label>
+                        <input type="email" id="confirmEmail" name="confirmEmail" placeholder="Re-enter email">
+                        <span class="error-msg" id="confirmEmailError"></span>
+                    </div>
+                </div>
+
+                <div class="grid-2">
+                    <div class="input-group">
+                        <label for="userId">Preferred User ID <span class="required">*</span></label>
+                        <input type="text" id="userId" name="userId" placeholder="e.g. Juan_123">
+                        <span class="helper-text">8-20 chars, starts with a letter, letters/numbers/underscore only.</span>
+                        <span class="error-msg" id="userIdError"></span>
+                    </div>
+                    <div class="input-group">
+                        <label for="confirmUserId">Confirm User ID <span class="required">*</span></label>
+                        <input type="text" id="confirmUserId" name="confirmUserId" placeholder="Re-enter User ID">
+                        <span class="error-msg" id="confirmUserIdError"></span>
+                    </div>
+                </div>
+
+                <div class="divider">Personal Information</div>
+
+                <div class="grid-3">
+                    <div class="input-group">
+                        <label for="lastName">Last Name <span class="required">*</span></label>
+                        <input type="text" id="lastName" name="lastName">
+                        <span class="error-msg" id="lastNameError"></span>
+                    </div>
+                    <div class="input-group">
+                        <label for="givenName">Given Name <span class="required">*</span></label>
+                        <input type="text" id="givenName" name="givenName">
+                        <span class="error-msg" id="givenNameError"></span>
+                    </div>
+                    <div class="input-group">
+                        <label for="middleName">Middle Name</label>
+                        <input type="text" id="middleName" name="middleName">
+                    </div>
+                </div>
+
+                <div class="input-group half-width">
+                    <label for="dob">Date of Birth <span class="required">*</span></label>
+                    <input type="date" id="dob" name="dob">
+                    <span class="error-msg" id="dobError"></span>
+                </div>
+
+                <div class="divider">Mailing Address</div>
+
+                <div class="input-group">
+                    <label for="roomUnit">Room / Floor / Unit No. & Building Name</label>
+                    <input type="text" id="roomUnit" name="roomUnit">
+                </div>
+
+                <div class="input-group">
+                    <label for="houseBlock">House / Lot & Block No.</label>
+                    <input type="text" id="houseBlock" name="houseBlock">
+                </div>
+
+                <div class="grid-2">
+                    <div class="input-group">
+                        <label for="street">Street</label>
+                        <input type="text" id="street" name="street">
+                    </div>
+                    <div class="input-group">
+                        <label for="subdivision">Subdivision</label>
+                        <input type="text" id="subdivision" name="subdivision">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Location Type</label>
+                    <div class="radio-options">
+                        <label class="radio-pill">
+                            <input type="radio" name="locationType" value="Metro Manila" checked>
+                            <span>Metro Manila</span>
+                        </label>
+                        <label class="radio-pill">
+                            <input type="radio" name="locationType" value="Province">
+                            <span>Province</span>
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">Register Account</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

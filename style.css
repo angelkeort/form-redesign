@@ -1,0 +1,225 @@
+:root {
+    --purple-primary: #7c3aed;
+    --purple-hover: #6d28d9;
+    --purple-light: #f5f3ff;
+    --purple-border: #ddd6fe;
+    --text-dark: #1f2937;
+    --text-muted: #6b7280;
+    --bg-gradient: linear-gradient(135deg, #f3e8ff 0%, #ede9fe 50%, #faf5ff 100%);
+    --card-bg: #ffffff;
+    --error-color: #ef4444;
+    --success-color: #10b981;
+    --radius: 12px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    background: var(--bg-gradient);
+    color: var(--text-dark);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5rem 1rem;
+}
+
+.auth-wrapper {
+    width: 100%;
+    max-width: 820px;
+}
+
+.form-container {
+    background: var(--card-bg);
+    padding: 3rem;
+    border-radius: var(--radius);
+    box-shadow: 0 20px 25px -5px rgba(124, 58, 237, 0.08), 0 10px 10px -5px rgba(124, 58, 237, 0.04);
+    border: 1px solid rgba(221, 214, 254, 0.6);
+}
+
+.form-header {
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.logo-pill {
+    display: inline-block;
+    background-color: var(--purple-light);
+    color: var(--purple-primary);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.35rem 0.85rem;
+    border-radius: 20px;
+    margin-bottom: 0.75rem;
+}
+
+.form-header h1 {
+    font-size: 1.85rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 0.4rem;
+}
+
+.form-header p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+.divider {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--purple-primary);
+    margin: 2rem 0 1.25rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--purple-light);
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+.half-width {
+    max-width: 50%;
+}
+
+.input-group {
+    margin-bottom: 1.25rem;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 0.4rem;
+}
+
+.required {
+    color: var(--error-color);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"] {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    background-color: #fafafa;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.25s ease;
+}
+
+input:focus {
+    background-color: #fff;
+    border-color: var(--purple-primary);
+    box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.1);
+}
+
+input.error-input {
+    border-color: var(--error-color);
+    background-color: #fef2f2;
+}
+
+input.success-input {
+    border-color: var(--success-color);
+}
+
+.helper-text {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-top: 0.3rem;
+}
+
+.error-msg {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--error-color);
+    margin-top: 0.25rem;
+    min-height: 1rem;
+    font-weight: 500;
+}
+
+.radio-options {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.radio-pill {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    background: #fafafa;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.radio-pill:hover {
+    border-color: var(--purple-border);
+    background: var(--purple-light);
+}
+
+.radio-pill input[type="radio"] {
+    accent-color: var(--purple-primary);
+}
+
+.submit-btn {
+    width: 100%;
+    margin-top: 2rem;
+    background-color: var(--purple-primary);
+    color: white;
+    border: none;
+    padding: 0.9rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    box-shadow: 0 4px 12px rgba(124, 58, 237, 0.25);
+}
+
+.submit-btn:hover {
+    background-color: var(--purple-hover);
+}
+
+.submit-btn:active {
+    transform: scale(0.98);
+}
+
+@media (max-width: 768px) {
+    .grid-2, .grid-3 {
+        grid-template-columns: 1fr;
+    }
+    .half-width {
+        max-width: 100%;
+    }
+    .form-container {
+        padding: 1.5rem;
+    }
+}
